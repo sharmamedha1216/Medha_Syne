@@ -11,19 +11,19 @@ public class LaunchBrowserApp {
 		
 		if(BrowserName.equalsIgnoreCase("chrome"))
 		{
-			System.setProperty("WebDriver.chrome,driver","");
+			System.setProperty("webdriver.chrome.driver","C:\\SeleniumDrivers\\Chromedriver25\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 		
 		else if(BrowserName.equalsIgnoreCase("firefox"))
 		{
-			System.setProperty("WebDriver.gecko,driver","");
+			System.setProperty("webdriver.gecko,driver","");
 			driver = new FirefoxDriver();
 		}
 		
 		else if (BrowserName.equalsIgnoreCase("ie")) 
 		{
-			System.setProperty("WebDriver.ie,driver","");
+			System.setProperty("webdriver.ie,driver","");
 			driver = new InternetExplorerDriver();
 		}
 		
@@ -31,7 +31,7 @@ public class LaunchBrowserApp {
 			System.out.println("Try with another Browser");
 		}
 		
-		driver.get(url);
+		driver.get(url); //http://startoursus.com/India
 	}
 
 }
